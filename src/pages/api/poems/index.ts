@@ -1,3 +1,4 @@
+import { POEMS } from "@/fixture/poem";
 import { NextApiRequest, NextApiResponse } from "next";
 
 export default async function handler(
@@ -5,7 +6,6 @@ export default async function handler(
   res: NextApiResponse
 ) {
   if (req.method === "GET") {
-    const { poemId } = req.query;
-    res.status(200).json('hello 1');
+    res.status(200).json(POEMS);
   }
 }
